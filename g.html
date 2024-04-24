@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″>
+    <script>
+        function openLink() {
+            window.open("https://github.com/Gustavomanoelpo8", "_self")
+        }
+    </script>
+    <title>Coração</title>
+    <link rel="icon" type="image/x-icon" href="https://aux.iconspalace.com/uploads/cat-icon-256.png">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #0b1522;
+        }
+
+        .heart {
+            background: #800080;
+            position: relative;
+            height: 100px;
+            width: 100px;
+            /* animação */
+            transform: rotate(-45deg) scale(1);
+            animation: pulse 2s linear infinite;
+            box-shadow: -10px 10px 90px #800080;
+        }
+
+
+        .heart::after {
+            /* Fundo */
+            background: inherit;
+            border-radius: 50%;
+            /* Circulo */
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: 0;
+            height: 100px;
+            width: 100px;
+            box-shadow: -10px -10px 90px #800080;
+        }
+
+        .heart::before {
+            background: inherit;
+            border-radius: 50%;
+            /* Circulo */
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -50%;
+            height: 100px;
+            width: 100px;
+            box-shadow: 10px 10px 90px #800080;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: rotate(-45deg) scale(1.07);
+
+            }
+
+            50% {
+                transform: rotate(-45deg) scale(1);
+
+            }
+
+            100% {
+                transform: rotate(-45deg) scale(1.09);
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div onclick="openLink()" class="heart"></div>
+</body>
+
+</html>
